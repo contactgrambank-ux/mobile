@@ -50,7 +50,7 @@ const Transaction = ({ navigation }) => {
       const formattedPhone = phone.startsWith("+91") ? phone : `+91${phone}`;
       await axios.post(
         `${api_url}/txns/send-otp`,
-        { phone: formattedPhone },
+        { },
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
